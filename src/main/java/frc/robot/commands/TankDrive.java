@@ -9,13 +9,15 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
+import frc.robot.RobotMap;
+
 
 public class TankDrive extends Command {
-  private static final String RobotMap = null;
+  //private static final String RobotMap = null;
 
   public TankDrive() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.DriveTrain);
+    requires(Robot.driveTrain);
   }
 
   // Called just before this Command runs the first time. Only happens once
@@ -26,11 +28,11 @@ public class TankDrive extends Command {
   // Called repeatedly when this Command is scheduled to run; every time through loop
   @Override
   protected void execute() {
-    double leftStickY = Robot.m_oi.GetDriverRawAxis(RobotMap.LEFT_STICK_Y);
+    double leftStickY = Robot.m_oi.DriverController.getRawAxis(RobotMap.LEFT_STICK_Y);
     double rightStickY = Robot.m_oi.GetDriverRawAxis(RobotMap.RIGHT_STICK_Y);
 
     Robot.driveTrain.setLeftMotors(leftStickY);
-    Robot.driveTrain.setRightMotors(rightStickY);
+   // Robot.driveTrain.setRightMotors(rightStickY);
   }
 
   // Make this return true when this Command no longer needs to run execute()

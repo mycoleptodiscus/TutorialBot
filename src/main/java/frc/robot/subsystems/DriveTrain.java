@@ -17,9 +17,9 @@ import frc.robot.RobotMap;
 /**
  * Add your docs here.
  */
-public class DriveTrain extends Subsystem {
-  private VictorSPX motorLeft1 = new VictorSPX(RobotMap.MOTOR_LEFT_1_ID);
-  private VictorSPX motorLeft2 = new VictorSPX(RobotMap.MOTOR_LEFT_2_ID);
+public class DriveTrain extends Subsystem {   //counts as a subsystem
+  private VictorSPX motorLeft1 = new VictorSPX(RobotMap.MOTOR_LEFT_1_ID);   //creating objects
+  private VictorSPX motorLeft2 = new VictorSPX(RobotMap.MOTOR_LEFT_2_ID);   //all caps with underscores for variables
   private VictorSPX motorRight1 = new VictorSPX(RobotMap.MOTOR_RIGHT_1_ID);
   private VictorSPX motorRight2 = new VictorSPX(RobotMap.MOTOR_RIGHT_2_ID);
   // Put methods for controlling this subsystem
@@ -31,7 +31,7 @@ public class DriveTrain extends Subsystem {
     // setDefaultCommand(new MySpecialCommand());
   } 
 
-public void setLeftMotors (double speed) {
+public void setLeftMotors (double speed) {    //methods
   motorLeft1.set(ControlMode.PercentOutput, -speed);   //makes sure both motors get set to same % output
   motorLeft2.set(ControlMode.PercentOutput, -speed);   //because they have the same variable
 

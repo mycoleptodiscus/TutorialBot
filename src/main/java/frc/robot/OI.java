@@ -6,7 +6,6 @@
 /*----------------------------------------------------------------------------*/
 
 package frc.robot;
-
 import edu.wpi.first.wpilibj.Joystick;
 
 /**
@@ -15,7 +14,7 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class OI {
 
-private Joystick DriverController = new Joystick(RobotMap.DRIVER_CONTROLLER);
+public Joystick DriverController = new Joystick(RobotMap.DRIVER_CONTROLLER);   //joystick object
 
 public double GetDriverRawAxis(int axis){
   return DriverController.getRawAxis(axis);
